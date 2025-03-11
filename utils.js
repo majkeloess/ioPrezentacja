@@ -14,5 +14,20 @@ export const getRandomFloat = (min, max) => {
     return Math.random() * (max - min) + min;
 };  
 
+export const getRandomBoolean = () => {
+    return Math.random() < 0.5;
+};
+
+export const getRandomColor = () => {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};        
+
+export const getRandomDate = (start, end) => {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+};
+
+export const getRandomString = (length) => {
+    return Math.random().toString(36).substring(2, 2 + length);
+};
 
 
